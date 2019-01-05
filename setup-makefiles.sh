@@ -44,5 +44,33 @@ write_headers "$DEVICE"
 # The standard blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt true
 
+# Deal with files that needs to be put in rootfs
+if [ -f proprietary-files-rootfs.txt ]; then
+    # We will change PRODUCTMK to create a new file.
+    # Save original value and restore when done.
+    SAVED_PRODUCTMK=$PRODUCTMK
+    export PRODUCTMK=${PRODUCTMK/%.mk/-rootfs.mk}
+
+    # Copyright headers but not guards
+    write_header "$PRODUCTMK"
+
+    # General copy routine
+    parse_file_list proprietary-files-rootfs.txt
+
+    # Require using "system/vendor" instead of $(TARGET_COPY_OUT_VENDOR),
+    # make the following sed easier
+    write_product_copy_files FALSE
+
+    # The key: replace system/ in target with root/
+    sed -i 's|:system|:root|g' "$PRODUCTMK"
+
+    # Include rootfs file list
+    printf "\n\$(call inherit-product,vendor/$VENDOR/$DEVICE/$(basename $PRODUCTMK))" >> $SAVED_PRODUCTMK
+
+    # Restore file name
+    export PRODUCTMK=$SAVED_PRODUCTMK
+    unset SAVED_PRODUCTMK
+fi
+
 # Finish
 write_footers
