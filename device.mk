@@ -29,11 +29,9 @@ ifeq ($(wildcard vendor/nvidia/dragon-tlk/tlk),vendor/nvidia/dragon-tlk/tlk)
     SECURE_OS_BUILD ?= tlk
 endif
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/google/dragon-kernel/Image.fit
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1800
+TARGET_SCREEN_WIDTH := 2560
 
 ifeq ($(TARGET_PRODUCT), ryu_kasan)
 LOCAL_FSTAB := $(LOCAL_PATH)/fstab.dragon.nocrypt
@@ -44,7 +42,6 @@ endif
 TARGET_RECOVERY_FSTAB = $(LOCAL_FSTAB)
 
 PRODUCT_COPY_FILES := \
-    $(LOCAL_KERNEL):kernel \
     $(LOCAL_PATH)/dump_bq25892.sh:system/bin/dump_bq25892.sh \
     $(LOCAL_PATH)/touchfwup.sh:system/bin/touchfwup.sh \
     $(LOCAL_PATH)/init.dragon.rc:root/init.dragon.rc \
@@ -216,7 +213,6 @@ $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-he
 
 # set default USB configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.adb.secure=1 \
     ro.sf.lcd_density=320 \
     ro.opengles.version=196610
 
