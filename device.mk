@@ -129,6 +129,14 @@ PRODUCT_PACKAGES += \
     libbt-vendor \
     android.hardware.bluetooth@1.0-impl-dragon
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service \
+    camera.device@1.0-impl \
+    camera.device@3.2-impl \
+    libshim_camera
+
 # Copy dsp firmware to the vendor parition so it is available when hotwording
 # starts
 PRODUCT_COPY_FILES += \
