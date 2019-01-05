@@ -95,6 +95,10 @@ TARGET_FS_CONFIG_GEN += device/google/dragon/config.fs
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/google/dragon/bluetooth
 BOARD_HAVE_BLUETOOTH_BCM := true
 
+# Shims
+TARGET_LD_SHIM_LIBS += \
+    /system/vendor/lib/hw/camera.dragon.so|libshim_camera.so
+
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
