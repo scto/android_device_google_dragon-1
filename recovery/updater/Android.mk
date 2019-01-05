@@ -17,6 +17,7 @@ LOCAL_C_INCLUDES += bootable/recovery
 # For vboot_struct.h
 LOCAL_C_INCLUDES += external/vboot_reference/firmware/include
 LOCAL_CFLAGS += -Werror
+LOCAL_STATIC_LIBRARIES := libedify libotautil
 
 include $(BUILD_STATIC_LIBRARY)
 
@@ -34,6 +35,7 @@ LOCAL_C_INCLUDES += bootable/recovery
 # For vboot_struct.h
 LOCAL_C_INCLUDES += external/vboot_reference/firmware/include
 LOCAL_CFLAGS += -Werror
+LOCAL_STATIC_LIBRARIES := libedify
 
 include $(BUILD_STATIC_LIBRARY)
 
@@ -47,6 +49,7 @@ LOCAL_CFLAGS += -Wno-unused-parameter -DUSE_LOGCAT
 LOCAL_C_INCLUDES += bootable/recovery
 # For vboot_struct.h
 LOCAL_C_INCLUDES += external/vboot_reference/firmware/include
+LOCAL_STATIC_LIBRARIES := libedify
 
 include $(BUILD_EXECUTABLE)
 
