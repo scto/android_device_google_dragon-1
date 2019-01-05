@@ -238,7 +238,8 @@ $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-he
 # set default USB configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320 \
-    ro.opengles.version=196610
+    ro.opengles.version=196610 \
+    ro.recents.grid=true
 
 # for audio
 #TODO(dgreid) do we need libnvvisualizer?
