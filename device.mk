@@ -29,12 +29,6 @@ ifeq ($(wildcard vendor/nvidia/dragon-tlk/tlk),vendor/nvidia/dragon-tlk/tlk)
     SECURE_OS_BUILD ?= tlk
 endif
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/google/dragon-kernel/Image.fit
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
 ifeq ($(TARGET_PRODUCT), ryu_kasan)
 LOCAL_FSTAB := $(LOCAL_PATH)/fstab.dragon.nocrypt
 else
@@ -44,7 +38,6 @@ endif
 TARGET_RECOVERY_FSTAB = $(LOCAL_FSTAB)
 
 PRODUCT_COPY_FILES := \
-    $(LOCAL_KERNEL):kernel \
     $(LOCAL_PATH)/dump_bq25892.sh:system/bin/dump_bq25892.sh \
     $(LOCAL_PATH)/touchfwup.sh:system/bin/touchfwup.sh \
     $(LOCAL_PATH)/init.dragon.rc:root/init.dragon.rc \
