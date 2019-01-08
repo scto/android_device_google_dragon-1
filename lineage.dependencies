@@ -1,0 +1,10 @@
+[
+  {
+    "repository": "android_kernel_google_dragon",
+    "target_path": "kernel/google/dragon"
+  },
+  {
+    "repository": "android_vendor_google_dragon",
+    "target_path": "vendor/google/dragon"
+  }
+]
