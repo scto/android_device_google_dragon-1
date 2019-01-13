@@ -141,7 +141,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rt5677_elf_vad:vendor/firmware/rt5677_elf_vad
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/enctune.conf:system/etc/enctune.conf
+    $(LOCAL_PATH)/enctune.conf:$(TARGET_COPY_OUT_VENDOR)/etc/enctune.conf
 
 PRODUCT_COPY_FILES += \
     device/google/dragon/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf
