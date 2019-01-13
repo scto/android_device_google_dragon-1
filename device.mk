@@ -123,7 +123,8 @@ PRODUCT_COPY_FILES += \
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
     libbt-vendor \
-    android.hardware.bluetooth@1.0-impl-dragon
+    android.hardware.bluetooth@1.0-impl-dragon \
+    android.hardware.bluetooth@1.0-service
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -156,27 +157,31 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_PACKAGES += \
     librs_jni \
+    android.hardware.renderscript@1.0-impl \
     com.android.future.usb.accessory
 
 PRODUCT_PACKAGES += \
     power.dragon \
     sensors.dragon \
+    android.hardware.power@1.0-impl \
+    android.hardware.power@1.0-service \
     android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service \
-    android.hardware.power@1.0-impl
+    android.hardware.sensors@1.0-service
 
-# Configstore HAL
+# Configstore
 PRODUCT_PACKAGES += \
     android.hardware.configstore@1.0-service
 
 # Health HAL
 PRODUCT_PACKAGES += \
-    android.hardware.health@1.0-impl
+    android.hardware.health@1.0-impl \
+    android.hardware.health@1.0-service
 
 # Light HAL
 PRODUCT_PACKAGES += \
     lights.dragon \
-    android.hardware.light@2.0-impl
+    android.hardware.light@2.0-impl \
+    android.hardware.light@2.0-service
 
 # Keymaster HAL
 PRODUCT_PACKAGES += \
@@ -198,7 +203,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service
 
-# Memtrack HAL
+# Memtrack
 PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service
@@ -236,6 +241,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320 \
     ro.opengles.version=196610 \
     ro.recents.grid=true
+
+# USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
 
 # for audio
 #TODO(dgreid) do we need libnvvisualizer?
