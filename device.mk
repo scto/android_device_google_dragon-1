@@ -125,7 +125,8 @@ PRODUCT_COPY_FILES += \
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
     libbt-vendor \
-    android.hardware.bluetooth@1.0-impl-dragon
+    android.hardware.bluetooth@1.0-impl-dragon \
+    android.hardware.bluetooth@1.0-service
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -158,31 +159,35 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_PACKAGES += \
     librs_jni \
+    android.hardware.renderscript@1.0-impl \
     com.android.future.usb.accessory
 
 PRODUCT_PACKAGES += \
     power.dragon \
-    sensors.dragon \
-    android.hardware.sensors@1.0-impl \
-    android.hardware.power@1.0-impl
+    android.hardware.power@1.0-impl \
+    android.hardware.power@1.0-service
 
 # Health HAL
 PRODUCT_PACKAGES += \
-    android.hardware.health@1.0-impl
+    android.hardware.health@1.0-impl \
+    android.hardware.health@1.0-service
 
 # Light HAL
 PRODUCT_PACKAGES += \
     lights.dragon \
-    android.hardware.light@2.0-impl
+    android.hardware.light@2.0-impl \
+    android.hardware.light@2.0-service
 
 # Sensors
 PRODUCT_PACKAGES += \
+    sensors.dragon \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service
 
 # Keymaster HAL
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
 
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
@@ -241,6 +246,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610 \
     ro.recents.grid=true
 
+# USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
 # for audio
 #TODO(dgreid) do we need libnvvisualizer?
 PRODUCT_PACKAGES += \
@@ -257,10 +266,12 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.0-impl
 
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service
 
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.1-impl
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.composer@2.1-service
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.monitorRotation=true \
