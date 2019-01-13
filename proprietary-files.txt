@@ -74,7 +74,6 @@ vendor/firmware/nvidia/tegra210/nvjpg.bin
 vendor/firmware/nvidia/tegra210/tegra_lp0_resume.fw
 vendor/firmware/nvidia/tegra210/vic.bin
 vendor/firmware/nvidia/tegra210/xusb.bin
-vendor/firmware/rt5677_elf_vad
 vendor/firmware/synaptics.img
 
 # Graphics
