@@ -339,7 +339,7 @@ int mixer_init(struct audio_device *adev)
                 }
             } while (mixer == NULL);
 
-            sprintf(mixer_path, "/system/etc/mixer_paths_%d.xml", card);
+            sprintf(mixer_path, "/vendor/etc/mixer_paths_%d.xml", card);
             audio_route = audio_route_init(card, mixer_path);
             if (!audio_route) {
                 ALOGE("%s: Failed to init audio route controls for card %d, aborting.",
@@ -3227,7 +3227,7 @@ static int adev_open(const hw_module_t *module, const char *name,
 
     *device = &adev->device.common;
 
-    cras_dsp_init("/system/etc/cras/speakerdsp.ini");
+    cras_dsp_init("/vendor/etc/cras/speakerdsp.ini");
 
     ALOGV("%s: exit", __func__);
     return 0;

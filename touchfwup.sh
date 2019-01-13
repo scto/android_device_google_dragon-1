@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/vendor/bin/sh
 
 LOG_FILE="/data/misc/touchfwup/rmi4update.txt"
 

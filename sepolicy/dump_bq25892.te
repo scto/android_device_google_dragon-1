@@ -1,4 +1,4 @@
-# permissions for /system/bin/dump_bq25892.sh
+# permissions for /vendor/bin/dump_bq25892.sh
 # which is used to debug information about the state of the charger chip
 type dump_bq25892, domain, device_domain_deprecated;
 type dump_bq25892_exec, exec_type, file_type;
