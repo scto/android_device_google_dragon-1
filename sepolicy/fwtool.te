@@ -1,4 +1,4 @@
-# permissions for /system/bin/fwtool
+# permissions for /vendor/bin/fwtool
 type fwtool, domain, device_domain_deprecated;
 type fwtool_exec, exec_type, file_type;
 

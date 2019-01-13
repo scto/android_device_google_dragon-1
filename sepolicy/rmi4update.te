@@ -1,4 +1,4 @@
-# init runs /system/bin/touchfwup.sh which runs rmi4update
+# init runs /vendor/bin/touchfwup.sh which runs rmi4update
 type rmi4update, domain, device_domain_deprecated;
 type rmi4update_exec, exec_type, file_type;
 

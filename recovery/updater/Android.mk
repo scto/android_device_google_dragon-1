@@ -55,6 +55,7 @@ LOCAL_CFLAGS += -Wno-unused-parameter -DUSE_LOGCAT
 LOCAL_C_INCLUDES += bootable/recovery bootable/recovery/edify/include
 # For vboot_struct.h
 LOCAL_C_INCLUDES += external/vboot_reference/firmware/include
+LOCAL_VENDOR_MODULE := true
 LOCAL_HEADER_LIBRARIES := libcutils_headers
 
 include $(BUILD_EXECUTABLE)
