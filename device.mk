@@ -40,7 +40,7 @@ else
 LOCAL_FSTAB := $(LOCAL_PATH)/fstab.dragon
 endif
 
-TARGET_RECOVERY_FSTAB = $(LOCAL_FSTAB)
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery.fstab
 
 PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/dump_bq25892.sh:system/bin/dump_bq25892.sh \
