@@ -94,6 +94,7 @@ TARGET_FS_CONFIG_GEN += device/google/dragon/config.fs
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/google/dragon/bluetooth
 BOARD_HAVE_BLUETOOTH_BCM := true
+BOARD_CUSTOM_BT_CONFIG := device/google/dragon/bluetooth/vnd_dragon.txt
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
