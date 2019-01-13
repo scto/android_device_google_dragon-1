@@ -36,5 +36,7 @@ LOCAL_SRC_FILES := \
 
 LOCAL_SHARED_LIBRARIES := liblog libcutils libutils libdl
 
+LOCAL_VENDOR_MODULE := true
+
 include $(BUILD_SHARED_LIBRARY)
 endif  #($(BOARD_VENDOR_USE_SENSOR_HAL), sensor_hub)
