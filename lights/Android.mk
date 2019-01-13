@@ -29,4 +29,6 @@ LOCAL_SHARED_LIBRARIES := liblog
 
 LOCAL_MODULE := lights.dragon
 
+LOCAL_VENDOR_MODULE := true
+
 include $(BUILD_SHARED_LIBRARY)
