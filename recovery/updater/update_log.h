@@ -17,7 +17,7 @@
 #define _RECOVERY_UPDATE_LOG_H_
 
 #ifdef USE_LOGCAT
-#include <cutils/log.h>
+#include <log/log.h>
 #else
 /* when running in recovery mode, only stdout is logged properly */
 #define ALOGD(format, args...) printf("D %s: " format, LOG_TAG, ## args)

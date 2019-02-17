@@ -52,4 +52,6 @@ LOCAL_CLANG_CFLAGS += -no-integrated-as
 
 LOCAL_VENDOR_MODULE := true
 
+LOCAL_HEADER_LIBRARIES :=  libhardware_headers
+
 include $(BUILD_SHARED_LIBRARY)
