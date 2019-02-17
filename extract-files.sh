@@ -63,4 +63,9 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" true "${CLEAN_VENDOR}"
 
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" ${KANG} --section "${SECTION}"
 
+# Fix some blobs
+patchelf --add-needed libutilscallstack.so "$LINEAGE_ROOT/vendor/$VENDOR/$DEVICE/proprietary/vendor/lib/libglcore.so"
+patchelf --add-needed libutilscallstack.so "$LINEAGE_ROOT/vendor/$VENDOR/$DEVICE/proprietary/vendor/lib64/libglcore.so"
+sed -i 's|/system/etc/enctune.conf|/vendor/etc/enctune.conf|g' "$LINEAGE_ROOT/vendor/$VENDOR/$DEVICE/proprietary/vendor/lib/libnvomx.so"
+
 "${MY_DIR}/setup-makefiles.sh"
