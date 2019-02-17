@@ -38,5 +38,7 @@ LOCAL_SHARED_LIBRARIES := liblog libcutils libutils libdl
 
 LOCAL_VENDOR_MODULE := true
 
+LOCAL_HEADER_LIBRARIES :=  libhardware_headers
+
 include $(BUILD_SHARED_LIBRARY)
 endif  #($(BOARD_VENDOR_USE_SENSOR_HAL), sensor_hub)

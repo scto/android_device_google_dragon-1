@@ -3,7 +3,7 @@
  * found in the LICENSE file.
  */
 
-#include <cutils/log.h>
+#include <log/log.h>
 #include <semaphore.h>
 #include "cras_expr.h"
 #include "cras_dsp_ini.h"

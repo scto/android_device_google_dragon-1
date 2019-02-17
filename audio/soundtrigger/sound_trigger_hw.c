@@ -22,9 +22,10 @@
 #include <malloc.h>
 #include <poll.h>
 #include <pthread.h>
+#include <unistd.h>
 #include <sys/ioctl.h>
 #include <sys/prctl.h>
-#include <cutils/log.h>
+#include <log/log.h>
 #include <cutils/uevent.h>
 
 #include <hardware/hardware.h>
