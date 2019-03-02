@@ -146,3 +146,7 @@ vendor/lib64/libnvos.so
 # Wi-Fi tools
 vendor/bin/halutil
 vendor/xbin/wlutil
+
+# Widevine DRM
+vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib64/mediadrm/libwvdrmengine.so
