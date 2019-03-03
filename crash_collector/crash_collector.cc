@@ -42,7 +42,7 @@ namespace {
 
 using android::String8;
 
-const char kOutputDirectory[] = "/data/system/crash_reports";
+const char kOutputDirectory[] = "/data/vendor/crash_reports";
 const int kMaxNumReports = 16;
 
 // Gets a list of entries under the specified directory.

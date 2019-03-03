@@ -32,7 +32,7 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 public class CrashReportProvider extends ContentProvider {
-    private static final File sCrashReportDirectory = new File("/data/system/crash_reports/");
+    private static final File sCrashReportDirectory = new File("/data/vendor/crash_reports/");
     private static FileObserver sFileObserver;
 
     public static final String ACTION_CRASH_REPORT_ADDED =

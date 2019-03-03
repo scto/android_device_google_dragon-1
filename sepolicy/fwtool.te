@@ -1,6 +1,6 @@
 # permissions for /vendor/bin/fwtool
 type fwtool, domain, device_domain_deprecated;
-type fwtool_exec, exec_type, file_type;
+type fwtool_exec, exec_type, file_type, vendor_file_type;
 
 init_daemon_domain(fwtool)
 

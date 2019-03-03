@@ -45,7 +45,7 @@
 /system/bin/crash_dispatcher                    u:object_r:crash_collector_exec:s0
 /system/bin/crash_collector32                   u:object_r:crash_collector_exec:s0
 /system/bin/crash_collector64                   u:object_r:crash_collector_exec:s0
-/data/system/crash_reports(/.*)?                u:object_r:crash_reports_data_file:s0
+/data/vendor/crash_reports(/.*)?                u:object_r:crash_reports_data_file:s0
 
 # camera
 /dev/imx219                                     u:object_r:camera_device:s0
@@ -62,19 +62,16 @@
 /dev/tlk_device                                 u:object_r:tee_device:s0
 
 # secure os storage
-/data/ss(/.*)?                                  u:object_r:tee_data_file:s0
+/data/ss(/.*)?                                  u:object_r:nv_tee_data_file:s0
 
 # tlk_daemon
 /vendor/bin/tlk_daemon                          u:object_r:tee_exec:s0
 
 # data file for battery/charging bug reports
-/data/misc/fw_logs(/.*)?                        u:object_r:fw_logs_data_file:s0
+/data/vendor/fw_logs(/.*)?                      u:object_r:fw_logs_data_file:s0
 
 # logs for touch firmware update
-/data/misc/touchfwup(/.*)?                      u:object_r:touch_fw_update_log_file:s0
-
-# camera overrides ISP files
-/vendor/firmware/camera(/.*)?                   u:object_r:camera_data_file:s0
+/data/vendor/touchfwup(/.*)?                    u:object_r:touch_fw_update_log_file:s0
 
 #sysfs nodes for cpuinfo for CTS
 /sys/firmware/devicetree/base/cpus(/.*)?        u:object_r:sysfs_socinfo:s0

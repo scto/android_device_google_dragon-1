@@ -1,6 +1,6 @@
 #!/vendor/bin/sh
 
-LOG_FILE="/data/misc/fw_logs/bq25892.txt"
+LOG_FILE="/data/vendor/fw_logs/bq25892.txt"
 
 /vendor/bin/fwtool ec usbpd 0 > ${LOG_FILE}
 /vendor/bin/fwtool ec usbpdpower >> ${LOG_FILE}
