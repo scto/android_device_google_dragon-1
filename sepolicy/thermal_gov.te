@@ -1,6 +1,6 @@
 # permissions for /vendor/bin/tune-thermal-gov.sh
 type thermal_gov, domain, device_domain_deprecated;
-type thermal_gov_exec, exec_type, file_type;
+type thermal_gov_exec, exec_type, file_type, vendor_file_type;
 
 init_daemon_domain(thermal_gov)
 

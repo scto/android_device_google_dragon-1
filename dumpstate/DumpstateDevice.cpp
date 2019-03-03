@@ -55,10 +55,10 @@ Return<void> DumpstateDevice::dumpstateBoard(const hidl_handle& handle) {
 
     DumpFileToFd(fd, "INTERRUPTS", "/proc/interrupts");
     // This is the file created by setting debug.bq25892.
-    DumpFileToFd(fd, "Charger chip registers", "/data/misc/fw_logs/bq25892.txt");
+    DumpFileToFd(fd, "Charger chip registers", "/data/vendor/fw_logs/bq25892.txt");
 
     DumpFileToFd(fd, "Battery gas gauge", "/sys/class/power_supply/bq27742-0/uevent");
-    DumpFileToFd(fd, "Touchscreen firmware updater", "/data/misc/touchfwup/rmi4update.txt");
+    DumpFileToFd(fd, "Touchscreen firmware updater", "/data/vendor/touchfwup/rmi4update.txt");
     DumpFileToFd(fd, "Ion heap", "/d/ion/heaps/system");
 
     return Void();

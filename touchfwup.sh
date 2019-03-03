@@ -1,6 +1,6 @@
 #!/vendor/bin/sh
 
-LOG_FILE="/data/misc/touchfwup/rmi4update.txt"
+LOG_FILE="/data/vendor/touchfwup/rmi4update.txt"
 
 echo -n "Updater date/time: " > ${LOG_FILE}
 date >> ${LOG_FILE}

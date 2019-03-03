@@ -81,13 +81,13 @@ on post-fs-data
     mkdir /data/qcks/mdm 0770 system system
 
     # crash_collector
-    mkdir /data/system/crash_reports 0700 system system
+    mkdir /data/vendor/crash_reports 0700 system system
 
     # EC/charger logs
-    mkdir /data/misc/fw_logs 0755 root root
+    mkdir /data/vendor/fw_logs 0755 root root
 
     # touch firmware updater logs
-    mkdir /data/misc/touchfwup 0755 root log
+    mkdir /data/vendor/touchfwup 0755 root log
 
     # Wi-Fi
     mkdir /data/vendor/wifi 0755 wifi wifi

@@ -1,6 +1,6 @@
 # init runs /vendor/bin/touchfwup.sh
 type touch_fw_update, domain, device_domain_deprecated;
-type touch_fw_update_exec, exec_type, file_type;
+type touch_fw_update_exec, exec_type, file_type, vendor_file_type;
 type touch_fw_update_log_file, file_type, data_file_type, core_data_file_type;
 
 init_daemon_domain(touch_fw_update)
@@ -9,7 +9,7 @@ init_daemon_domain(touch_fw_update)
 allow touch_fw_update shell_exec:file rx_file_perms;
 allow touch_fw_update toolbox_exec:file rx_file_perms;
 
-# write to /data/misc/touchfwup/rmi4update.txt
+# write to /data/vendor/touchfwup/rmi4update.txt
 allow touch_fw_update touch_fw_update_log_file:file create_file_perms;
 allow touch_fw_update touch_fw_update_log_file:dir w_dir_perms;
 
