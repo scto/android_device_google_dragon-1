@@ -39,7 +39,6 @@ vendor/lib64/libnvwinsys.so
 vendor/lib64/libnvwsi.so
 
 # Firmwares
-vendor/firmware/bcm4350c0.hcd
 vendor/firmware/cros-pd/dingdong_v1.7.317-b0bb7c9.bin
 vendor/firmware/cros-pd/dingdong_v1.7.575-96b74f1.bin
 vendor/firmware/cros-pd/dingdong_v1.7.684-69498dd.bin
@@ -142,7 +141,3 @@ vendor/lib64/hw/keystore.dragon.so
 
 # Shared libraries
 vendor/lib64/libnvos.so
-
-# Wi-Fi tools
-vendor/bin/halutil
-vendor/xbin/wlutil
