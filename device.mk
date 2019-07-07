@@ -29,6 +29,11 @@ ifeq ($(wildcard vendor/nvidia/dragon-tlk/tlk),vendor/nvidia/dragon-tlk/tlk)
     SECURE_OS_BUILD ?= tlk
 endif
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1800
+TARGET_SCREEN_WIDTH := 2560
+TARGET_BOOTANIMATION_HALF_RES := true
+
 ifeq ($(TARGET_PRODUCT), ryu_kasan)
 LOCAL_FSTAB := $(LOCAL_PATH)/fstab.dragon.nocrypt
 else
