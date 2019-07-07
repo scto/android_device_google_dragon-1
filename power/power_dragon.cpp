@@ -107,17 +107,17 @@ static void power_init(struct power_module __unused *module)
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/timer_rate",
                 "20000");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/timer_slack",
-                "20000");
+                "180000");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/min_sample_time",
-                "80000");
+                "19000");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/hispeed_freq",
                 "1530000");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load",
-                "99");
+                "90");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/target_loads",
-                "65 228000:75 624000:85");
+                "85");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay",
-                "20000");
+                "19000");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration",
                 "1000000");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/io_is_busy", "0");
@@ -295,4 +295,3 @@ struct dragon_power_module HAL_MODULE_INFO_SYM = {
     boostpulse_warned: 0,
     gpu_qos_manager: NULL,
 };
-
