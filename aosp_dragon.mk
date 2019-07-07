@@ -21,10 +21,6 @@
 # lines, aosp and dragon, hence its name.
 #
 
-PRODUCT_PROPERTY_OVERRIDES := \
-        net.dns1=8.8.8.8 \
-        net.dns2=8.8.4.4
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/google/dragon/product.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
