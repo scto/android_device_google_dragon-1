@@ -4,9 +4,9 @@
 
 REGION_VPD_FILE=/sys/firmware/vpd/ro/region
 
-REGION="us"
+REGION="zh"
 LANGUAGE="en"
-COUNTRY="US"
+COUNTRY="CN"
 
 if [ -f "${REGION_VPD_FILE}" ]; then
   REGION="$(cat ${REGION_VPD_FILE})"
@@ -24,5 +24,6 @@ case "${REGION}" in
     ;;
 esac
 
-setprop ro.product.locale "${LANGUAGE}-${COUNTRY}"
-setprop ro.boot.wificountrycode "${COUNTRY}"
+setprop ro.product.locale "zh-CN"
+setprop persist.sys.wifi.country_code "00"
+setprop ro.boot.wificountrycode "00"
