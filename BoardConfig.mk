@@ -72,8 +72,6 @@ TARGET_USES_64_BIT_BINDER := true
 
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1
 
-#TARGET_SUPPORTS_64_BIT_APPS := true
-
 TARGET_FS_CONFIG_GEN += device/google/dragon/config.fs
 
 # Bluetooth
