@@ -22,6 +22,7 @@ LOCAL_SRC_FILES := $(call all-subdir-java-files)
 LOCAL_PACKAGE_NAME := DragonKeyboard
 LOCAL_CERTIFICATE := platform
 LOCAL_PROGUARD_ENABLED := disabled
+LOCAL_PRIVATE_PLATFORM_APIS := true
 
 include $(BUILD_PACKAGE)
 
