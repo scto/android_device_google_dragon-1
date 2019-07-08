@@ -119,6 +119,9 @@ ART_USE_HSPACE_COMPACT=true
 # let charger mode enter suspend
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
+# Real Battery Info
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
 BOARD_SEPOLICY_DIRS += device/google/dragon/sepolicy
 
 # add firmware update to the updater binary
