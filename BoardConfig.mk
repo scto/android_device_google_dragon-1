@@ -41,8 +41,8 @@ BOARD_KERNEL_IMAGE_NAME := Image.fit
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/google/dragon
-TARGET_KERNEL_CONFIG := dragon_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+TARGET_KERNEL_CONFIG := dragon_xtreme_defconfig
 
 # Disable emulator for "make dist" until there is a 64-bit qemu kernel
 BUILD_EMULATOR := false
