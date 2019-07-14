@@ -15,5 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/aosp_dragon.mk \
-	$(LOCAL_DIR)/aosp_dragon_car.mk
+	$(LOCAL_DIR)/lineage_dragon.mk

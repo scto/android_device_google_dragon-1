@@ -1,4 +1,4 @@
-# Copyright (C) 2017 The Android Open Source Project
+# Copyright (C) 2015 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,17 +21,16 @@
 # lines, aosp and dragon, hence its name.
 #
 
-PRODUCT_COPY_FILES += \
-    device/google/dragon/manifest_dragon_car.xml:vendor/manifest.xml
+# Inherit from those products. Most specific first.
+$(call inherit-product, device/google/dragon/product.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-$(call inherit-product, packages/services/Car/car_product/build/car.mk)
-$(call inherit-product, device/google/dragon/aosp_dragon.mk)
+# Inherit some common LineageOS stuff.
+$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
-BOARD_SEPOLICY_DIRS += packages/services/Car/car_product/sepolicy
-
-PRODUCT_NAME := aosp_dragon_car
+PRODUCT_NAME := lineage_dragon
 PRODUCT_DEVICE := dragon
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := Android Auto Embedded on dragon
+PRODUCT_BRAND := Google
+PRODUCT_MODEL := Pixel C
 PRODUCT_MANUFACTURER := Google
 PRODUCT_RESTRICT_VENDOR_FILES := true
