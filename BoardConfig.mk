@@ -123,6 +123,9 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 # Real Battery Info
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
+# Security Patch Level
+VENDOR_SECURITY_PATCH := 2019-06-05
+
 BOARD_SEPOLICY_DIRS += device/google/dragon/sepolicy
 
 # add firmware update to the updater binary
