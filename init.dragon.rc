@@ -65,8 +65,8 @@ on post-fs-data
     mkdir /data/misc/camera 0700 media camera
 
     # NFC: create data/nfc for nv storage
-    mkdir /data/nfc 0770 nfc nfc
-    mkdir /data/nfc/param 0770 nfc nfc
+    mkdir /data/nfc 0771 nfc nfc
+    mkdir /data/nfc/param 0771 nfc nfc
 
     # secure os storage
     mkdir /data/ss 0700 system system
@@ -76,9 +76,9 @@ on post-fs-data
     mkdir /data/ss 0700 system system
 
     # modem init
-    mkdir /data/qcks 0770 system system
+    mkdir /data/qcks 0771 system system
     mkdir /data/efs 0771 system system
-    mkdir /data/qcks/mdm 0770 system system
+    mkdir /data/qcks/mdm 0771 system system
 
     # crash_collector
     mkdir /data/vendor/crash_reports 0700 system system
@@ -115,28 +115,28 @@ on boot
 
     restorecon_recursive /sys/devices/system/cpu/cpufreq/interactive
     chown system system /sys/devices/system/cpu/cpufreq/interactive/timer_rate
-    chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/timer_rate
+    chmod 0666 /sys/devices/system/cpu/cpufreq/interactive/timer_rate
     chown system system /sys/devices/system/cpu/cpufreq/interactive/timer_slack
-    chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/timer_slack
+    chmod 0666 /sys/devices/system/cpu/cpufreq/interactive/timer_slack
     chown system system /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
-    chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
+    chmod 0666 /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
     chown system system /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
-    chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
+    chmod 0666 /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
     chown system system /sys/devices/system/cpu/cpufreq/interactive/target_loads
-    chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/target_loads
+    chmod 0666 /sys/devices/system/cpu/cpufreq/interactive/target_loads
     chown system system /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
-    chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
+    chmod 0666 /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
     chown system system /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
-    chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
+    chmod 0666 /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
     chown system system /sys/devices/system/cpu/cpufreq/interactive/boost
-    chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/boost
+    chmod 0666 /sys/devices/system/cpu/cpufreq/interactive/boost
     chown system system /sys/devices/system/cpu/cpufreq/interactive/boostpulse
     chown system system /sys/devices/system/cpu/cpufreq/interactive/input_boost
-    chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/input_boost
+    chmod 0666 /sys/devices/system/cpu/cpufreq/interactive/input_boost
     chown system system /sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration
-    chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration
+    chmod 0666 /sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration
     chown system system /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
-    chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
+    chmod 0666 /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
     chown system system /sys/devices/57000000.gpu/pstate
 
     # update foreground cpuset now that processors are up
@@ -148,17 +148,17 @@ on boot
 
     # for gpu cap in battery saver mode
     chown system system /sys/kernel/debug/system_edp/capping/force_gpu
-    chmod 0660 /sys/kernel/debug/system_edp/capping/force_gpu
+    chmod 0666 /sys/kernel/debug/system_edp/capping/force_gpu
 
     # for lightbar
     chown system system /sys/class/chromeos/cros_ec/lightbar/userspace_control
-    chmod 0660 /sys/class/chromeos/cros_ec/lightbar/userspace_control
+    chmod 0666 /sys/class/chromeos/cros_ec/lightbar/userspace_control
     chown system system /sys/class/chromeos/cros_ec/lightbar/sequence
-    chmod 0660 /sys/class/chromeos/cros_ec/lightbar/sequence
+    chmod 0666 /sys/class/chromeos/cros_ec/lightbar/sequence
 
     # for external power limits
     chown system system /sys/class/chromeos/cros_ec/usb-pd-charger/ext_voltage_lim
-    chmod 0660 /sys/class/chromeos/cros_ec/usb-pd-charger/ext_voltage_lim
+    chmod 0666 /sys/class/chromeos/cros_ec/usb-pd-charger/ext_voltage_lim
 
     # Enable CC4
     write /sys/devices/system/cpu/cpu0/cpuidle/state1/disabled 0
