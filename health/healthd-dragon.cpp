@@ -25,7 +25,7 @@
 #define PSU_SYSFS_MAX_CURRENT_PATH PSU_SYSFS_PATH "/current_max"
 #define BATTERY_CRITICAL_LOW_CAP 10
 #define BATTERY_CRITICAL_LOW_IMAX_MA 5000
-#define BATTERY_MAX_IMAX_MA          9000
+#define BATTERY_MAX_IMAX_MA 9000
 
 using namespace android;
 
@@ -96,7 +96,6 @@ static void dragon_soc_adjust(struct BatteryProperties *props)
 
 int healthd_board_battery_update(struct BatteryProperties *props)
 {
-
     dragon_soc_adjust(props);
 
     // return 0 to log periodic polled battery status to kernel log

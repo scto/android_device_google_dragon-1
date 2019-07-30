@@ -181,7 +181,6 @@ static void sync_slots(void)
 		{'B', "RW_SECTION_B", "RW_FWID_B"},
 	};
 
-
 	char cur_part = vboot_get_mainfw_act();
 	int cur_index;
 

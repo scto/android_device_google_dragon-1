@@ -106,7 +106,6 @@ enum {
 
 };
 
-
 #define MIXER_CARD 0
 #define SOUND_CARD 0
 
@@ -304,7 +303,6 @@ struct audio_usecase {
     struct audio_stream*    stream;
     struct listnode         mixer_list;
 };
-
 
 struct audio_device {
     struct audio_hw_device  device;

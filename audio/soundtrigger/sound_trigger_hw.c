@@ -103,7 +103,6 @@ static int stdev_init_mixer(struct dragon_sound_trigger_device *stdev)
 {
     int ret = -1;
 
-
     stdev->mixer = mixer_open(DRAGON_MIXER_VAD);
     if (!stdev->mixer)
         goto err;
@@ -565,7 +564,6 @@ size_t sound_trigger_read_samples(int audio_handle, void *buffer, size_t  buffer
         ret = -EINVAL;
         goto exit;
     }
-
 
 read_again:
     frames = pcm_mmap_avail(stdev->pcm);

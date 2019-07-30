@@ -26,11 +26,9 @@
 #include <log/log.h>
 
 namespace {
-
 const char kCrashCollector32Path[] = "/system/bin/crash_collector32";
 const char kCrashCollector64Path[] = "/system/bin/crash_collector64";
-
-}  // namespace
+} // namespace
 
 // Reads the coredump from STDIN and checks whether it's 32-bit or 64-bit,
 // and dispatches it to the appropriate version of crash_collector.

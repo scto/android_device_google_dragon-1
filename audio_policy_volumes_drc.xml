@@ -171,7 +171,6 @@ volume index from 0 to 100.
         <point>86,-1200</point>
         <point>100,0</point>
     </volume>
-
     <volume stream="AUDIO_STREAM_ACCESSIBILITY" deviceCategory="DEVICE_CATEGORY_EARPIECE"
                                                 ref="DEFAULT_MEDIA_VOLUME_CURVE"/>
     <volume stream="AUDIO_STREAM_ACCESSIBILITY" deviceCategory="DEVICE_CATEGORY_EXT_MEDIA"
@@ -193,4 +192,3 @@ volume index from 0 to 100.
     <volume stream="AUDIO_STREAM_PATCH" deviceCategory="DEVICE_CATEGORY_EXT_MEDIA"
                                         ref="FULL_SCALE_VOLUME_CURVE"/>
 </volumes>
-

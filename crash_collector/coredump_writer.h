@@ -92,4 +92,4 @@ class CoredumpWriter {
   DISALLOW_COPY_AND_ASSIGN(CoredumpWriter);
 };
 
-#endif  // COREDUMP_WRITER_H_
+#endif // COREDUMP_WRITER_H_

@@ -163,7 +163,6 @@ key EQUALS {
     ralt+shift:                         '\u042a'
 }
 
-
 ### ROW 3
 
 key A {

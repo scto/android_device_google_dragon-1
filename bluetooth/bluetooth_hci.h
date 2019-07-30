@@ -50,10 +50,10 @@ class BluetoothHci : public IBluetoothHci {
 
 extern "C" IBluetoothHci* HIDL_FETCH_IBluetoothHci(const char* name);
 
-}  // namespace dragon
-}  // namespace V1_0
-}  // namespace bluetooth
-}  // namespace hardware
-}  // namespace android
+} // namespace dragon
+} // namespace V1_0
+} // namespace bluetooth
+} // namespace hardware
+} // namespace android
 
-#endif  // android_hardware_bluetooth_V1_0_BluetoothHci_H_
+#endif // android_hardware_bluetooth_V1_0_BluetoothHci_H_

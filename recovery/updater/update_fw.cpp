@@ -227,4 +227,3 @@ out_free:
 	free(version);
 	return res;
 }
-

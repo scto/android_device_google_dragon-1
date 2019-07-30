@@ -266,7 +266,6 @@ static void eq2_run(struct dsp_module *module, unsigned long sample_count)
 		}
 	}
 
-
 	if (data->ports[0] != data->ports[2])
 		memcpy(data->ports[2], data->ports[0],
 		       sizeof(float) * sample_count);

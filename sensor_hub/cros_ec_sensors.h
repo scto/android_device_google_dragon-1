@@ -52,7 +52,6 @@ enum cros_ec_gesture {
     CROS_EC_MAX_GESTURE,
 };
 
-
 /*****************************************************************************/
 /* from ec_commands.h */
 struct cros_ec_event {
@@ -75,9 +74,7 @@ enum motionsensor_activity {
     MOTIONSENSE_MAX_ACTIVITY,
 };
 
-
 /*****************************************************************************/
-
 enum cros_ec_sensor_device {
     CROS_EC_ACCEL,
     CROS_EC_GYRO,

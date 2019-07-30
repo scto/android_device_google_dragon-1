@@ -32,7 +32,6 @@ LOCAL_SHARED_LIBRARIES := \
 	libaudioroute \
 	libdl
 
-
 LOCAL_C_INCLUDES += \
 	device/google/dragon/audio/hal/dsp \
 	external/tinyalsa/include \

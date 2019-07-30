@@ -72,8 +72,8 @@ bool BluetoothAddress::get_local_address(uint8_t* local_addr) {
   return false;
 }
 
-}  // namespace dragon
-}  // namespace V1_0
-}  // namespace bluetooth
-}  // namespace hardware
-}  // namespace android
+} // namespace dragon
+} // namespace V1_0
+} // namespace bluetooth
+} // namespace hardware
+} // namespace android

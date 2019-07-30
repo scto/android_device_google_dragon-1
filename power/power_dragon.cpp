@@ -72,7 +72,6 @@ static const char *low_power_max_cpu_freq = LOW_POWER_MAX_FREQ;
 static const char *normal_gpu_cap = NORMAL_GPU_CAP;
 static const char *low_power_gpu_cap = LOW_POWER_GPU_CAP;
 
-
 void sysfs_write(const char *path, const char *s)
 {
     char buf[80];
@@ -225,7 +224,7 @@ static void dragon_power_hint(struct power_module *module, power_hint_t hint,
         break;
 
     default:
-            break;
+        break;
     }
 }
 
@@ -264,7 +263,6 @@ static int dragon_power_open(const hw_module_t *module, const char *name,
     ALOGD("%s: exit %d", __FUNCTION__, retval);
     return retval;
 }
-
 
 static struct hw_module_methods_t power_module_methods = {
     .open = dragon_power_open,

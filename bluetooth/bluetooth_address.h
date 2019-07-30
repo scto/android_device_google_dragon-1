@@ -51,8 +51,8 @@ class BluetoothAddress {
   static bool get_local_address(uint8_t* addr);
 };
 
-}  // namespace dragon
-}  // namespace V1_0
-}  // namespace bluetooth
-}  // namespace hardware
-}  // namespace android
+} // namespace dragon
+} // namespace V1_0
+} // namespace bluetooth
+} // namespace hardware
+} // namespace android

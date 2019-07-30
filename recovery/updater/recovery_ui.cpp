@@ -50,7 +50,6 @@ class DragonDevice : public Device {
     };
 };
 
-
 Device* make_device() {
     return new DragonDevice(new ScreenRecoveryUI);
 }

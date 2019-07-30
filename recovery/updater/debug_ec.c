@@ -170,7 +170,6 @@ static int cmd_ec_bq25892(int argc, const char **argv)
 	int rv;
 	int batt_mv, sys_mv, vbus_mv, chg_ma, input_ma;
 
-
 	if (!get_ec())
 		return -ENODEV;
 
@@ -252,7 +251,6 @@ static int cmd_ec_bq27742(int argc, const char **argv)
 	int value;
 	int rv;
 	int chg_mv, chg_ma;
-
 
 	if (!get_ec())
 		return -ENODEV;
@@ -430,7 +428,6 @@ static int cmd_ec_gpioget(int argc, const char **argv)
 
 	return 0;
 }
-
 
 static int cmd_ec_gpioset(int argc, const char **argv)
 {
@@ -922,7 +919,6 @@ static int cmd_ec_usbpd(int argc, const char **argv)
 				break;
 			}
 		}
-
 
 		if (!option_ok) {
 			fprintf(stderr, "Unknown option: %s\n", argv[i]);

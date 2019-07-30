@@ -192,7 +192,6 @@ static void fill_flow_info(struct ini *ini)
 	}
 }
 
-
 struct ini *cras_dsp_ini_create(const char *ini_filename)
 {
 	struct ini *ini;

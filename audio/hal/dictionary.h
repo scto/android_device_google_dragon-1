@@ -1,4 +1,3 @@
-
 /*-------------------------------------------------------------------------*/
 /**
    @file    dictionary.h
@@ -27,7 +26,6 @@
                                 New types
  ---------------------------------------------------------------------------*/
 
-
 /*-------------------------------------------------------------------------*/
 /**
   @brief    Dictionary object
@@ -45,7 +43,6 @@ typedef struct _dictionary_ {
     char        **  key ;   /** List of string keys */
     unsigned     *  hash ;  /** List of hash values for keys */
 } dictionary ;
-
 
 /*---------------------------------------------------------------------------
                             Function prototypes
@@ -105,7 +102,6 @@ void dictionary_del(dictionary * vd);
 /*--------------------------------------------------------------------------*/
 char * dictionary_get(dictionary * d, const char * key, char * def);
 
-
 /*-------------------------------------------------------------------------*/
 /**
   @brief    Set a value in a dictionary.
@@ -146,7 +142,6 @@ int dictionary_set(dictionary * vd, const char * key, const char * val);
  */
 /*--------------------------------------------------------------------------*/
 void dictionary_unset(dictionary * d, const char * key);
-
 
 /*-------------------------------------------------------------------------*/
 /**

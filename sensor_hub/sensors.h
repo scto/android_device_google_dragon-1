@@ -44,7 +44,7 @@ struct cros_ec_sensors_poll_context_t {
 
     private:
     enum {
-        crosEcRingFd           = 0,
+        crosEcRingFd = 0,
         crosEcWakeFd,
         numFds,
     };
@@ -75,8 +75,6 @@ struct cros_ec_sensors_poll_context_t {
             int handle);
 
 };
-
-
 
 #define SENSORS_H_
 #endif  /* SENSORS_H_ */

@@ -100,7 +100,6 @@ void f()
 		(a)->count = 0;			\
 	} while (0)
 
-
 /* Return the index of the element with the value x. -1 if not found */
 #define ARRAY_FIND(a, x)						\
 	({								\

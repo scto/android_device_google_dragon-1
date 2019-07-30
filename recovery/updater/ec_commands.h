@@ -15,7 +15,7 @@
  * determined in other ways.  Remove this once the kernel code no longer
  * depends on it.
  */
-#define EC_PROTO_VERSION          0x00000002
+#define EC_PROTO_VERSION 0x00000002
 
 /* Command version mask */
 #define EC_VER_MASK(version) (1UL << (version))
@@ -39,8 +39,8 @@
 
 /* The actual block is 0x800-0x8ff, but some BIOSes think it's 0x880-0x8ff
  * and they tell the kernel that so we have to think of it as two parts. */
-#define EC_HOST_CMD_REGION0    0x800
-#define EC_HOST_CMD_REGION1    0x880
+#define EC_HOST_CMD_REGION0     0x800
+#define EC_HOST_CMD_REGION1     0x880
 #define EC_HOST_CMD_REGION_SIZE 0x80
 
 /* EC command register bit functions */
@@ -52,7 +52,7 @@
 #define EC_LPC_CMDR_SCI		(1 << 5)  /* SCI event is pending */
 #define EC_LPC_CMDR_SMI		(1 << 6)  /* SMI event is pending */
 
-#define EC_LPC_ADDR_MEMMAP       0x900
+#define EC_LPC_ADDR_MEMMAP     0x900
 #define EC_MEMMAP_SIZE         255 /* ACPI IO buffer max is 255 bytes */
 #define EC_MEMMAP_TEXT_MAX     8   /* Size of a string in the memory map */
 
@@ -116,7 +116,7 @@
  *
  * Valid only if EC_MEMMAP_THERMAL_VERSION returns >= 2.
  */
-#define EC_TEMP_SENSOR_B_ENTRIES      8
+#define EC_TEMP_SENSOR_B_ENTRIES   8
 
 /* Special values for mapped temperature sensors */
 #define EC_TEMP_SENSOR_NOT_PRESENT    0xff
@@ -127,12 +127,12 @@
  * The offset of temperature value stored in mapped memory.  This allows
  * reporting a temperature range of 200K to 454K = -73C to 181C.
  */
-#define EC_TEMP_SENSOR_OFFSET      200
+#define EC_TEMP_SENSOR_OFFSET 200
 
 /*
  * Number of ALS readings at EC_MEMMAP_ALS
  */
-#define EC_ALS_ENTRIES             2
+#define EC_ALS_ENTRIES 2
 
 /*
  * The default value a temperature sensor will return when it is present but
@@ -157,7 +157,7 @@
 #define EC_SWITCH_POWER_BUTTON_PRESSED   0x02
 #define EC_SWITCH_WRITE_PROTECT_DISABLED 0x04
 /* Was recovery requested via keyboard; now unused. */
-#define EC_SWITCH_IGNORE1		 0x08
+#define EC_SWITCH_IGNORE1                0x08
 /* Recovery requested via dedicated signal (from servo board) */
 #define EC_SWITCH_DEDICATED_RECOVERY     0x10
 /* Was fake developer mode switch; now unused.  Remove in next refactor. */
@@ -167,7 +167,7 @@
 /* Host command interface supports LPC args (LPC interface only) */
 #define EC_HOST_CMD_FLAG_LPC_ARGS_SUPPORTED  0x01
 /* Host command interface supports version 3 protocol */
-#define EC_HOST_CMD_FLAG_VERSION_3   0x02
+#define EC_HOST_CMD_FLAG_VERSION_3           0x02
 
 /* Wireless switch flags */
 #define EC_WIRELESS_SWITCH_ALL       ~0x00  /* All flags */
@@ -298,7 +298,7 @@
  */
 
 /* DPTF battery charging current limit */
-#define EC_ACPI_MEM_CHARGING_LIMIT     0x08
+#define EC_ACPI_MEM_CHARGING_LIMIT 0x08
 
 /* Charging limit is specified in 64 mA steps */
 #define EC_ACPI_MEM_CHARGING_LIMIT_STEP_MA   64
@@ -314,7 +314,6 @@
 
 /* Current version of ACPI memory address space */
 #define EC_ACPI_MEM_VERSION_CURRENT 2
-
 
 /*
  * This header file is used in coreboot both in C and ACPI code.  The ACPI code
@@ -792,7 +791,7 @@ struct ec_response_get_cmd_versions {
  * lpc must read the status from the command register. Attempting this on
  * lpc will overwrite the args/parameter space and corrupt its data.
  */
-#define EC_CMD_GET_COMMS_STATUS		0x09
+#define EC_CMD_GET_COMMS_STATUS 0x09
 
 /* Avoid using ec_status which is for return values */
 enum ec_comms_status {
@@ -804,7 +803,7 @@ struct ec_response_get_comms_status {
 } __packed;
 
 /* Fake a variety of responses, purely for testing purposes. */
-#define EC_CMD_TEST_PROTOCOL		0x0a
+#define EC_CMD_TEST_PROTOCOL 0x0a
 
 /* Tell the EC what to send back to us. */
 struct ec_params_test_protocol {
@@ -819,7 +818,7 @@ struct ec_response_test_protocol {
 } __packed;
 
 /* Get prococol information */
-#define EC_CMD_GET_PROTOCOL_INFO	0x0b
+#define EC_CMD_GET_PROTOCOL_INFO 0x0b
 
 /* Flags for ec_response_get_protocol_info.flags */
 /* EC_RES_IN_PROGRESS may be returned if a command is slow */
@@ -841,12 +840,11 @@ struct ec_response_get_protocol_info {
 	uint32_t flags;
 } __packed;
 
-
 /*****************************************************************************/
 /* Get/Set miscellaneous values */
 
 /* The upper byte of .flags tells what to do (nothing means "get") */
-#define EC_GSV_SET        0x80000000
+#define EC_GSV_SET 0x80000000
 
 /* The lower three bytes of .flags identifies the parameter, if that has
    meaning for an individual command. */
@@ -868,7 +866,7 @@ struct ec_response_get_set_value {
 
 /*****************************************************************************/
 /* List the features supported by the firmware */
-#define EC_CMD_GET_FEATURES  0x0d
+#define EC_CMD_GET_FEATURES 0x0d
 
 /* Supported features */
 enum ec_feature_code {
@@ -1438,7 +1436,6 @@ struct ec_response_lightbar {
 
 		struct lightbar_params_v0 get_params_v0;
 		struct lightbar_params_v1 get_params_v1;
-
 
 		struct lightbar_params_v2_timing get_params_v2_timing;
 		struct lightbar_params_v2_tap get_params_v2_tap;
@@ -2086,7 +2083,6 @@ struct ec_response_thermal_get_threshold {
 	uint16_t value;
 } __packed;
 
-
 /* The version 1 structs are visible. */
 enum ec_temp_thresholds {
 	EC_TEMP_THRESH_WARN = 0,
@@ -2179,7 +2175,6 @@ struct ec_params_tmp006_set_calibration_v1 {
 	uint8_t reserved;
 	float val[0];
 } __packed;
-
 
 /* Read raw TMP006 data */
 #define EC_CMD_TMP006_GET_RAW 0x55
@@ -2840,7 +2835,6 @@ struct ec_response_charge_state {
 	};
 } __packed;
 
-
 /*
  * Set maximum battery charging current.
  */
@@ -2907,7 +2901,6 @@ struct ec_params_sb_wr_block {
 	uint8_t reg;
 	uint16_t data[32];
 } __packed;
-
 
 /*****************************************************************************/
 /* Battery vendor parameters
@@ -3306,7 +3299,6 @@ struct ec_response_pd_log {
 	uint8_t payload[0]; /* optional additional data payload: 0..16 bytes */
 } __packed;
 
-
 /* The timestamp is the microsecond counter shifted to get about a ms. */
 #define PD_LOG_TIMESTAMP_SHIFT 10 /* 1 LSB = 1024us */
 
@@ -3351,8 +3343,8 @@ struct ec_response_pd_log {
 /* Port is the override port */
 #define CHARGE_FLAGS_OVERRIDE          (1 << 13)
 /* Charger type */
-#define CHARGE_FLAGS_TYPE_SHIFT               3
-#define CHARGE_FLAGS_TYPE_MASK       (0xf << CHARGE_FLAGS_TYPE_SHIFT)
+#define CHARGE_FLAGS_TYPE_SHIFT        3
+#define CHARGE_FLAGS_TYPE_MASK         (0xf << CHARGE_FLAGS_TYPE_SHIFT)
 /* Power delivery role */
 #define CHARGE_FLAGS_ROLE_MASK         (7 <<  0)
 

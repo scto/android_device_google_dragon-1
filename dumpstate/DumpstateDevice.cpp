@@ -64,8 +64,8 @@ Return<void> DumpstateDevice::dumpstateBoard(const hidl_handle& handle) {
     return Void();
 }
 
-}  // namespace implementation
-}  // namespace V1_0
-}  // namespace dumpstate
-}  // namespace hardware
-}  // namespace android
+} // namespace implementation
+} // namespace V1_0
+} // namespace dumpstate
+} // namespace hardware
+} // namespace android

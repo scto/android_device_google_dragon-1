@@ -33,7 +33,6 @@
 
 #include "cros_ec_sensors.h"
 
-
 /*****************************************************************************/
 static int max(int a, int b) {
     return (a > b) ? a : b;
@@ -226,7 +225,6 @@ int CrosECSensor::batch(int handle,
             info->max_report_latency_ns = max(sampling_period_ns, info->sampling_period_ns);
         }
 
-
         /* Call activate to change the paramters if necessary */
         return activate(handle, info->enabled);
     } else {
@@ -327,7 +325,6 @@ int CrosECSensor::processEvent(sensors_event_t* data, const cros_ec_event *event
         if (gesture->sensor_data.flags & SENSOR_FLAG_ONE_SHOT_MODE)
             gesture->enabled = 0;
     } else {
-
         /*
          * The sensor hub can send data even if the sensor is not set up.
          * workaround it unitl b/23238991 is fixed.
@@ -366,7 +363,6 @@ int CrosECSensor::processEvent(sensors_event_t* data, const cros_ec_event *event
     }
     return 0;
 }
-
 
 /*
  * cros_ec_sysfs_get_attr: Helper function to read sysfs attributes.

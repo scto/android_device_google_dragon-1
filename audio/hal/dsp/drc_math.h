@@ -157,7 +157,6 @@ static inline float linear_to_decibels(float linear)
 #endif
 }
 
-
 static inline float warp_sinf(float x)
 {
 #ifdef SLOW_WARP_SIN

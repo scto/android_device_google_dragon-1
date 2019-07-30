@@ -41,10 +41,10 @@ struct DumpstateDevice : public IDumpstateDevice {
 
 };
 
-}  // namespace implementation
-}  // namespace V1_0
-}  // namespace dumpstate
-}  // namespace hardware
-}  // namespace android
+} // namespace implementation
+} // namespace V1_0
+} // namespace dumpstate
+} // namespace hardware
+} // namespace android
 
-#endif  // ANDROID_HARDWARE_DUMPSTATE_V1_0_DUMPSTATEDEVICE_H
+#endif // ANDROID_HARDWARE_DUMPSTATE_V1_0_DUMPSTATEDEVICE_H

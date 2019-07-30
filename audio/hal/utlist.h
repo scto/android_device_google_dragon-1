@@ -196,7 +196,6 @@ do {                                                                           \
 		}                                                              \
 	} while (0)
 
-
 /* Create a variable name using given prefix and current line number. */
 #define MAKE_NAME(prefix) TOKEN_PASTE2(prefix, __LINE__)
 #define TOKEN_PASTE2(x, y) TOKEN_PASTE(x, y)
@@ -216,4 +215,3 @@ do {                                                                           \
 #define DL_SEARCH LL_SEARCH
 
 #endif /* UTLIST_H */
-

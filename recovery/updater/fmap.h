@@ -22,7 +22,7 @@
 #define FMAP_VER_MAJOR		1	/* this header's FMAP minor version */
 #define FMAP_VER_MINOR		1	/* this header's FMAP minor version */
 #define FMAP_STRLEN		32	/* maximum length for strings, */
-					/* including null-terminator */
+/* including null-terminator */
 
 enum fmap_flags {
 	FMAP_AREA_STATIC	= 1 << 0,

@@ -13,9 +13,7 @@ ifeq ($(BOARD_VENDOR_USE_SENSOR_HAL), sensor_hub)
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
 LOCAL_PATH := $(call my-dir)
-
 
 # HAL module implemenation, not prelinked, and stored in
 # hw/<SENSORS_HARDWARE_MODULE_ID>.<ro.hardware.sensor>.so
@@ -31,8 +29,8 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_OWNER := google
 
 LOCAL_SRC_FILES := \
-  sensors.cpp      \
-  cros_ec_sensors.cpp  \
+  sensors.cpp \
+  cros_ec_sensors.cpp
 
 LOCAL_SHARED_LIBRARIES := liblog libcutils libutils libdl
 
@@ -41,4 +39,4 @@ LOCAL_VENDOR_MODULE := true
 LOCAL_HEADER_LIBRARIES :=  libhardware_headers
 
 include $(BUILD_SHARED_LIBRARY)
-endif  #($(BOARD_VENDOR_USE_SENSOR_HAL), sensor_hub)
+endif #($(BOARD_VENDOR_USE_SENSOR_HAL), sensor_hub)

@@ -184,7 +184,6 @@ static const char * const use_case_table[AUDIO_USECASE_MAX] = {
     [USECASE_VOICE_CALL] = "voice-call",
 };
 
-
 #define STRING_TO_ENUM(string) { #string, string }
 
 struct pcm_config pcm_config_deep_buffer = {
@@ -441,7 +440,6 @@ static int set_voice_volume_l(struct audio_device *adev, float volume)
     return err;
 }
 
-
 snd_device_t get_output_snd_device(struct audio_device *adev, audio_devices_t devices)
 {
 
@@ -611,7 +609,6 @@ snd_device_t get_input_snd_device(struct audio_device *adev, audio_devices_t out
     } else if (source == AUDIO_SOURCE_DEFAULT) {
         goto exit;
     }
-
 
     if (snd_device != SND_DEVICE_NONE) {
         goto exit;
@@ -826,7 +823,6 @@ static int select_devices(struct audio_device *adev,
     ALOGV("%s: out_snd_device(%d: %s) in_snd_device(%d: %s)", __func__,
           out_snd_device, get_snd_device_display_name(out_snd_device),
           in_snd_device,  get_snd_device_display_name(in_snd_device));
-
 
     /* Disable current sound devices */
     if (usecase->out_snd_device != SND_DEVICE_NONE) {
@@ -1732,7 +1728,6 @@ static int start_voice_call(struct audio_device *adev)
 
     select_devices(adev, USECASE_VOICE_CALL);
 
-
     /* TODO: implement voice call start */
 
     /* set cached volume */
@@ -2340,7 +2335,6 @@ static int in_close_pcm_devices(struct stream_in *in)
     }
     return 0;
 }
-
 
 /* must be called with stream and hw device mutex locked */
 static int do_in_standby_l(struct stream_in *in)
@@ -3190,7 +3184,6 @@ static int adev_open(const hw_module_t *module, const char *name,
         *device = NULL;
         return -EINVAL;
     }
-
 
     if (access(SOUND_TRIGGER_HAL_LIBRARY_PATH, R_OK) == 0) {
         adev->sound_trigger_lib = dlopen(SOUND_TRIGGER_HAL_LIBRARY_PATH,

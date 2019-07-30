@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2014 Google, Inc.  All Rights Reserved.
- * Copyright (c) 2015 NVIDIA, Inc.  All Rights Reserved.
+ * Copyright (c) 2014 Google, Inc. All Rights Reserved.
+ * Copyright (c) 2015 NVIDIA, Inc. All Rights Reserved.
  *
  */
 #include "timed_qos_manager.h"

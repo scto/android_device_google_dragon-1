@@ -21,7 +21,6 @@ extern "C" {
 #ifndef _RECOVERY_VBOOT_INTERFACE_H_
 #define _RECOVERY_VBOOT_INTERFACE_H_
 
-
 char *fdt_read_string(const char *prop);
 uint32_t fdt_read_u32(const char *prop);
 

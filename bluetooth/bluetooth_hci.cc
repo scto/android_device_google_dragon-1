@@ -138,8 +138,8 @@ IBluetoothHci* HIDL_FETCH_IBluetoothHci(const char* /* name */) {
   return new BluetoothHci();
 }
 
-}  // namespace dragon
-}  // namespace V1_0
-}  // namespace bluetooth
-}  // namespace hardware
-}  // namespace android
+} // namespace dragon
+} // namespace V1_0
+} // namespace bluetooth
+} // namespace hardware
+} // namespace android

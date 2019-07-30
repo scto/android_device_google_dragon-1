@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014 Google, Inc.  All Rights Reserved.
+ * Copyright (c) 2014 Google, Inc. All Rights Reserved.
  *
  */
 #ifndef POWER_HAL_TIME_QOS_MANAGER_H

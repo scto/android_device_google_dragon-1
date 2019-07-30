@@ -33,7 +33,6 @@ static const char* VENDOR_LIBRARY_SYMBOL_NAME =
 static const int INVALID_FD = -1;
 
 namespace {
-
 using android::hardware::bluetooth::V1_0::dragon::VendorInterface;
 using android::hardware::hidl_vec;
 
@@ -133,7 +132,7 @@ const bt_vendor_callbacks_t lib_callbacks = {
     buffer_free_cb,        transmit_cb,        epilog_cb,
     a2dp_offload_cb};
 
-}  // namespace
+} // namespace
 
 namespace android {
 namespace hardware {
@@ -356,8 +355,8 @@ void VendorInterface::HandleIncomingEvent(const hidl_vec<uint8_t>& hci_packet) {
   }
 }
 
-}  // namespace dragon
-}  // namespace V1_0
-}  // namespace bluetooth
-}  // namespace hardware
-}  // namespace android
+} // namespace dragon
+} // namespace V1_0
+} // namespace bluetooth
+} // namespace hardware
+} // namespace android
