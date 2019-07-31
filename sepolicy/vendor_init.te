@@ -1,0 +1,8 @@
+#============= vendor_init ==============
+allow vendor_init rootfs:dir write;
+allow vendor_init rootfs:dir add_name;
+
+allow vendor_init media_data_file:dir setattr;
+allow vendor_init camera_data_file:dir setattr;
+allow vendor_init system_data_file:dir setattr;
+allow vendor_init nv_tee_data_file:dir setattr;

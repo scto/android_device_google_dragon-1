@@ -10,3 +10,14 @@ allow init { cache_file storage_file }:dir mounton;
 
 # /config
 allow init configfs:{ file lnk_file } create_file_perms;
+
+allow init hwservicemanager:binder call;
+
+allow init ion_device:chr_file ioctl;
+allow init gpu_device:chr_file write;
+allow init gpu_device:chr_file ioctl;
+allow init host1x_device:chr_file write;
+
+allow init hidl_base_hwservice:hwservice_manager add;
+
+allow init hal_configstore_ISurfaceFlingerConfigs:hwservice_manager find;
