@@ -67,13 +67,6 @@ PRODUCT_PACKAGES += \
     fs_config_files \
     fwtool
 
-ifeq ($(TARGET_BUILD_VARIANT),eng)
-PRODUCT_PACKAGES += \
-    tinyplay \
-    tinycap \
-    tinymix
-endif
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/tablet_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
