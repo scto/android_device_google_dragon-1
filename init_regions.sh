@@ -24,6 +24,5 @@ case "${REGION}" in
     ;;
 esac
 
-setprop ro.product.locale "${LANGUAGE}-${COUNTRY}"
 setprop persist.sys.wifi.country_code "00"
 setprop ro.boot.wificountrycode "00"
