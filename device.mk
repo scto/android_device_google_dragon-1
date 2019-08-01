@@ -65,9 +65,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf \
     fs_config_files \
-    crash_dispatcher \
-    crash_collector \
-    CrashReportProvider \
     fwtool
 
 ifeq ($(TARGET_BUILD_VARIANT),eng)
