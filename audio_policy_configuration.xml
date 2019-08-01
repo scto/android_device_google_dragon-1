@@ -18,6 +18,7 @@
     <globalConfiguration speaker_drc_enabled="true"/>
 
     <modules>
+        <!-- Primary Audio HAL -->
         <module name="primary" halVersion="2.0">
             <attachedDevices>
                 <item>Speaker</item>
@@ -36,6 +37,7 @@
                 </mixPort>
             </mixPorts>
             <devicePorts>
+                <!-- Output devices declaration, i.e. Sink DEVICE PORT -->
                 <devicePort tagName="Speaker" type="AUDIO_DEVICE_OUT_SPEAKER" role="sink">
                 </devicePort>
                 <devicePort tagName="Wired Headset" type="AUDIO_DEVICE_OUT_WIRED_HEADSET" role="sink">
@@ -50,7 +52,7 @@
                 </devicePort>
                 <devicePort tagName="HDMI Out" type="AUDIO_DEVICE_OUT_AUX_DIGITAL" role="sink">
                 </devicePort>
-
+                <!-- Input devices declaration, i.e. Source DEVICE PORT -->
                 <devicePort tagName="Built-In Mic" type="AUDIO_DEVICE_IN_BUILTIN_MIC" role="source">
                 </devicePort>
                 <devicePort tagName="Wired Headset Mic" type="AUDIO_DEVICE_IN_WIRED_HEADSET" role="source">
@@ -58,6 +60,7 @@
                 <devicePort tagName="BT SCO Headset Mic" type="AUDIO_DEVICE_IN_BLUETOOTH_SCO_HEADSET" role="source">
                 </devicePort>
             </devicePorts>
+            <!-- route declaration, i.e. list all available sources for a given sink -->
             <routes>
                 <route type="mix" sink="Speaker"
                        sources="primary output"/>
@@ -73,25 +76,26 @@
                        sources="primary output"/>
                 <route type="mix" sink="HDMI Out"
                        sources="primary output"/>
-
                 <route type="mix" sink="primary input"
                        sources="Built-In Mic,Wired Headset Mic,BT SCO Headset Mic"/>
             </routes>
         </module>
 
-        <!-- A2dp Audio HAL -->
-        <xi:include href="a2dp_audio_policy_configuration.xml"/>
+        <!-- A2DP Audio HAL -->
+        <xi:include href="/vendor/etc/a2dp_audio_policy_configuration.xml"/>
 
         <!-- Usb Audio HAL -->
-        <xi:include href="usb_audio_policy_configuration.xml"/>
+        <xi:include href="/vendor/etc/usb_audio_policy_configuration.xml"/>
 
         <!-- Remote Submix Audio HAL -->
-        <xi:include href="r_submix_audio_policy_configuration.xml"/>
+        <xi:include href="/vendor/etc/r_submix_audio_policy_configuration.xml"/>
 
     </modules>
+    <!-- End of Modules section -->
 
     <!-- Volume section -->
-    <xi:include href="audio_policy_volumes_drc.xml"/>
-    <xi:include href="default_volume_tables.xml"/>
+    <xi:include href="/vendor/etc/audio_policy_volumes_drc.xml"/>
+    <xi:include href="/vendor/etc/default_volume_tables.xml"/>
+    <!-- End of Volume section -->
 
 </audioPolicyConfiguration>
